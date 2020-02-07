@@ -1,13 +1,93 @@
-body {
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  font-weight: 400;
+  background: #0D0D0D;
+  color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: .5rem;
+}
+
+h1 {
+  font-size: 3..375rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #04BF9D;
+  text-decoration: none;
+  transition: color 300ms ease;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+a:hover {
+  color: #03A688;
+}
+
+.display {
+  font-weight: 700;
+  font-size: 7.594rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+input {
+  font: inherit;
+  padding: .5rem 1rem;
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.button {
+  background: #04BF9D;
+  color: #000;
+  padding: .5rem 1rem;
+  transition: all 300ms ease;
+  display: block;
+  border: 1px solid #04BF9D;
+  width: 100%;
+}
+
+.button:hover {
+  background: #03A688;
+  color: #000;
 }
