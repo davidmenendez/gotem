@@ -1,0 +1,28 @@
+.notifications {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.notification {
+  background: #D92958;
+  max-width: 10rem;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: .5rem;
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-timing-function: linear;
+}
+
+@keyframes slidein {
+  0% {
+    transform: translate(100%);
+  }
+  10%, 90%{
+    transform: translate(0%);
+  }
+  100% {
+    transform: translate(100%);
+  }
+}

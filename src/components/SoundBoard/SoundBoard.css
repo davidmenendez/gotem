@@ -1,0 +1,12 @@
+.soundboard {
+  display: grid;
+  grid-template-columns: repeat(2, [col-start] 1fr);
+  grid-gap: 1rem;
+  word-break: break-all;
+}
+
+@media (min-width: 992px) {
+  .soundboard {
+    grid-template-columns: repeat(8, [col-start] 1fr);
+  }
+}
