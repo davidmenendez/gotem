@@ -2,7 +2,7 @@ const fs = require('fs');
 const express = require('express');
 const app = express();
 const server = app.listen(4000);
-const io = require('socket.io').listen(server);
+const io = require('socket.io').listen(server, { origins: '*:*' });
 const path = require('path');
 const soundPath = path.join(__dirname, 'public', 'sounds');
 const sounds = () => fs.readdirSync(soundPath).map(file => file.split('.').shift());
