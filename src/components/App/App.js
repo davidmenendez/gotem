@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
 import SoundBoard from '../SoundBoard';
-import io from 'socket.io-client';
+import socketIOClient from 'socket.io-client';
 import {
   useParams,
   Link,
@@ -17,7 +17,7 @@ const App = ({
   const { id } = useParams();
   const [socket, setSocket] = useState('');
   useEffect(() => {
-    const s = io();
+    const s = socketIOClient('http://127.0.0.1:4000');
     setSocket(s);
     s.emit('join', id);
     s.on('soundReceived', sound => {

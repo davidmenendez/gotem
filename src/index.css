@@ -25,7 +25,7 @@ h3 {
 }
 
 h1 {
-  font-size: 3..375rem;
+  font-size: 1.5rem;
 }
 
 h2 {
@@ -54,7 +54,13 @@ a:hover {
 
 .display {
   font-weight: 700;
-  font-size: 7.594rem;
+  font-size: 3.375rem;
+}
+
+@media (min-width: 576px) {
+  .display {
+    font-size: 7.594rem;
+  }
 }
 
 .container {
