@@ -17,7 +17,7 @@ const App = ({
   const { id } = useParams();
   const [socket, setSocket] = useState('');
   useEffect(() => {
-    const s = socketIOClient('http://127.0.0.1:3000');
+    const s = socketIOClient();
     setSocket(s);
     s.emit('join', id);
     s.on('soundReceived', sound => {
