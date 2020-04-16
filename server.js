@@ -1,9 +1,8 @@
 const fs = require('fs');
 const express = require('express');
 const app = express();
-const server = require('http').Server(app);
-const io = require('socket.io')(server);
-const port = process.env.PORT || 4000;
+const server = app.listen(4000);
+const io = require('socket.io').listen(server);
 const path = require('path');
 const soundPath = path.join(__dirname, 'public', 'sounds');
 const sounds = () => fs.readdirSync(soundPath).map(file => file.split('.').shift());
@@ -31,6 +30,3 @@ io.on('connection', socket => {
   });
 });
 
-server.listen(port, () => {
-  console.log(`listening on ${port}`);
-});
