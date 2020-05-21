@@ -10,7 +10,9 @@ const SoundButton = ({
     e.preventDefault();
     onClick(children);
   };
-  return <button className="soundbutton" onClick={clickHandler}>{children}</button>
+  const colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
+  const color = colors[Math.floor(Math.random() * colors.length)];
+  return <button className={`soundbutton soundbutton--${color}`} onClick={clickHandler}>{children}</button>
 };
 
 SoundButton.propTypes = {

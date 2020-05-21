@@ -30,12 +30,22 @@ const App = ({
       s.close();
     };
   }, [setSocket, id, toggleNotification]);
+
+  const copyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+    } catch (err) {
+      console.error('there was a problem copying the board link', err);
+    }
+  };
   return (
     <main className="app">
       <Notifications />
       <div className="container">
         <h1 className="display">GOTEM</h1>
-        <Link to="/">{`leave ${id} and return to lobby`}</Link>
+        <p>share the board with your friends</p>
+        <button onClick={copyLink} className="button">copy room link</button>
+        <p><Link to="/">return to lobby</Link></p>
         <SoundBoard socket={socket} />
       </div>
     </main>

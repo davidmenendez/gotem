@@ -23,7 +23,7 @@ const Home = () => {
         <div className="room-input">
           <form onSubmit={joinRoom}>
             <input type="text" value={room} onChange={onChangeHandler} placeholder="room name" />
-            <button className="button">join</button>
+            <button className="button button--block">join</button>
           </form>
         </div>
       </div>

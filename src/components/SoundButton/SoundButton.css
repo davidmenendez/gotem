@@ -1,12 +1,68 @@
 .soundbutton {
   padding: 2rem 1rem;
-  background: #04BF9D;
-  border: 1px solid #04BF9D;
+  background: #333;
+  border: 4px solid #ccc;
   position: relative;
   transition: all 300ms ease;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0;
 }
 
-.soundbutton:hover {
-  background: #D9042B;
-  border-color: #D9042B;
+.soundbutton--red:hover {
+  border-color: #f44336;
+}
+
+.soundbutton--red:active {
+  background: #f44336;
+}
+
+.soundbutton--yellow:hover {
+  border-color: #ffeb3b;
+}
+
+.soundbutton--yellow:active {
+  background: #ffeb3b;
+}
+
+.soundbutton--purple:hover {
+  border-color: #9c27b0;
+}
+
+.soundbutton--purple:active {
+  background: #9c27b0;
+}
+
+.soundbutton--blue:hover {
+  border-color: #2196f3;
+}
+
+.soundbutton--blue:active {
+  background: #2196f3;
+}
+
+.soundbutton--green:hover {
+  border-color: #4caf50;
+}
+
+.soundbutton--green:active {
+  background: #4caf50;
+}
+
+.soundbutton--yellow:hover {
+  border-color: #ffeb3b;
+}
+
+.soundbutton--yellow:active {
+  background: #ffeb3b;
+}
+
+.soundbutton--orange:hover {
+  border-color: #ff9800;
+}
+
+.soundbutton--orange:active {
+  background: #ff9800;
 }
