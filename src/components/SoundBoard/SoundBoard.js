@@ -23,13 +23,23 @@ const SoundBoard = ({
     socket.emit('soundRequest', { sound, id });
     playSound(sound);
   };
-  if (sounds.isFetching) return <p>loading</p>;
+  if (sounds.isFetching) {
+    const skeletonButtons = [];
+    for (let i = 0; i <= 12; i++) {
+      skeletonButtons.push(<SoundButton key={i} onClick={emitSound} />)
+    }
+    return (
+      <section className="soundboard">
+        {skeletonButtons}
+      </section>
+    )
+  }
   return (
     <section className="soundboard">
       {sounds.items.map(sound => <SoundButton key={sound} onClick={emitSound}>{sound}</SoundButton>)}
     </section>
   );
-}
+};
 
 SoundBoard.propTypes = {
   sounds: PropTypes.object.isRequired,

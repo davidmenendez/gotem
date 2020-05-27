@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
-import SoundBoard from '../SoundBoard';
+import SoundBoard from '../../components/SoundBoard';
 import socketIOClient from 'socket.io-client';
 import {
   useParams,
   Link,
 } from 'react-router-dom';
-import Notifications from '../Notifications';
+import Notifications from '../../components/Notifications';
 import { toggleNotification } from '../../actions';
 import { playSound } from '../../helpers';
 

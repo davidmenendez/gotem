@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import './Home.css';
 import { v4 } from 'uuid';
+import Page from '../../components/Page';
 
 const Home = () => {
   const history = useHistory();
@@ -11,11 +11,12 @@ const Home = () => {
   };
   const joinRoom = e => {
     e.preventDefault();
-    history.push(`/room/${room || v4()}`);
+    const fixedRoom = room.toLocaleLowerCase();
+    history.push(`/room/${fixedRoom || v4()}`);
   };
   return (
-    <section className="home">
-      <div className="container">
+    <Page className="landing">
+      <div className="login">
         <h1 className="display">GOTEM</h1>
         <h2>The shared soundboard</h2>
         <h3>Join a room</h3>
@@ -27,8 +28,8 @@ const Home = () => {
           </form>
         </div>
       </div>
-    </section>
+    </Page>
   );
-}
+};
 
 export default Home;

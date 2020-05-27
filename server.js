@@ -32,7 +32,7 @@ io.on('connection', socket => {
     socket.to(id).emit('soundReceived', sound);
   });
   socket.on('disconnect', () => {
-    console.log('user has DISCONNECTED');
+    console.log('user has disconnected');
   });
 });
 
