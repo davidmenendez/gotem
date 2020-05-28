@@ -5,14 +5,24 @@ import './SoundButton.css';
 const SoundButton = ({
   children,
   onClick,
+  loading,
 }) => {
   const clickHandler = e => {
     e.preventDefault();
     onClick(children);
   };
-  const colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
-  const color = colors[Math.floor(Math.random() * colors.length)];
-  return <button className={`soundbutton soundbutton--${color}`} onClick={clickHandler}>{children}</button>
+  const getButtonClasses = () => {
+    const classNames = [];
+    if (loading) classNames.push('soundbutton-skeleton');
+    else {
+      const colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      classNames.push('soundbutton', `soundbutton--${color}`);
+    }
+    return classNames.join(' ');
+  };
+  const classNames = getButtonClasses();
+  return <button className={classNames} onClick={clickHandler}>{children}</button>
 };
 
 SoundButton.propTypes = {

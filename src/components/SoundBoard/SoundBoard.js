@@ -25,8 +25,8 @@ const SoundBoard = ({
   };
   if (sounds.isFetching) {
     const skeletonButtons = [];
-    for (let i = 0; i <= 12; i++) {
-      skeletonButtons.push(<SoundButton key={i} onClick={emitSound} />)
+    for (let i = 0; i <= 24; i++) {
+      skeletonButtons.push(<SoundButton key={i} onClick={emitSound} loading />)
     }
     return (
       <section className="soundboard">
