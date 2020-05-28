@@ -27,10 +27,14 @@ const SoundButton = ({
 
 SoundButton.propTypes = {
   children: PropTypes.node,
+  onClick: PropTypes.func,
+  loading: PropTypes.bool,
 };
 
 SoundButton.defaultProps = {
   children: '',
+  onClick: () => {},
+  loading: false,
 };
 
 export default SoundButton;
